@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.assignment1_20104720.MainpageController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <TabPane tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Theatre">
+                    <fx:include source="theatre.fxml" />
+                </Tab>
+
+                <Tab text="Performance">
+                    <fx:include source="performance.fxml" />
+                </Tab>
+
+                <Tab text="Customer">
+                    <fx:include source="customer.fxml" />
+                </Tab>
+
+                <Tab text="Booking">
+                    <fx:include source="booking.fxml" />
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Text layoutX="110.0" layoutY="-40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+    </children>
+</AnchorPane>
