@@ -44,15 +44,15 @@
             <Font name="Times New Roman Bold" size="13.0" />
          </font></TextField>
       <DatePicker fx:id="performanceDateField" layoutX="124.0" layoutY="138.0" promptText="Performance Date" />
-      <ComboBox fx:id="seatSelection" layoutX="104.0" layoutY="177.0" prefWidth="150.0" promptText="Seat Selection" style="-fx-background-color: FFD700;" />
+      
       <Label layoutX="16.0" layoutY="181.0" />
-      <ComboBox fx:id="showForBooking" layoutX="179.0" layoutY="215.0" onMouseClicked="#populateShowForBooking" promptText="Show Selection" style="-fx-background-color: FFD700;" />
-      <ComboBox fx:id="performanceForBooking" layoutX="220.0" layoutY="251.0" onMouseClicked="#populatePerformanceForBooking" promptText="Performance Selection" style="-fx-background-color: FFD700;" />
-      <ComboBox fx:id="customerForBooking" layoutX="203.0" layoutY="287.0" onMouseClicked="#populateCustomerForBooking" promptText="Customer Selection" style="-fx-background-color: FFD700;" />
-      <ListView fx:id="bookingListView" layoutX="303.0" layoutY="33.0" prefHeight="89.0" prefWidth="294.0" />
-      <Button layoutX="406.0" layoutY="125.0" mnemonicParsing="false" onAction="#addBooking" style="-fx-background-color: FFD700;" text="Add Booking" />
-      <Button layoutX="395.0" layoutY="164.0" mnemonicParsing="false" onAction="#deleteBooking" style="-fx-background-color: FFD700;" text="Remove Booking" />
-      <Label layoutX="9.0" layoutY="313.0" prefHeight="31.0" prefWidth="600.0" text="Theatre Map" textAlignment="CENTER" wrapText="true">
+      <ComboBox fx:id="showForBooking" layoutX="190.0" layoutY="215.0" onMouseClicked="#populateShowForBooking" promptText="Show Selection" style="-fx-background-color: FFD700;" />
+      <ComboBox fx:id="performanceForBooking" layoutX="236.0" layoutY="252.0" onMouseClicked="#populatePerformanceForBooking" promptText="Performance Selection" style="-fx-background-color: FFD700;" />
+      <ComboBox fx:id="customerForBooking" layoutX="208.0" layoutY="177.0" onMouseClicked="#populateCustomerForBooking" promptText="Customer Selection" style="-fx-background-color: FFD700;" />
+      <ListView fx:id="bookingListView" layoutX="377.0" layoutY="33.0" prefHeight="187.0" prefWidth="220.0" />
+      <Button layoutX="487.0" layoutY="228.0" mnemonicParsing="false" onAction="#addBooking" style="-fx-background-color: FFD700;" text="Add Booking" />
+      <Button layoutX="476.0" layoutY="259.0" mnemonicParsing="false" onAction="#deleteBooking" style="-fx-background-color: FFD700;" text="Remove Booking" />
+      <Label layoutX="4.0" layoutY="313.0" prefHeight="31.0" prefWidth="600.0" text="Theatre Map" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Times New Roman Bold" size="20.0" />
          </font>
@@ -73,31 +73,26 @@
             <Font name="Times New Roman Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="16.0" layoutY="182.0" text="Seat Selection:">
+      <Label layoutX="17.0" layoutY="220.0" text="Select the Show for Booking:">
          <font>
             <Font name="Times New Roman Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="16.0" layoutY="220.0" text="Select the Show for Booking:">
+      <Label layoutX="21.0" layoutY="257.0" text="Select the Performance for Booking:">
          <font>
             <Font name="Times New Roman Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="17.0" layoutY="256.0" text="Select the Performance for Booking:">
+      <Label layoutX="17.0" layoutY="182.0" text="Select the Customer for Booking:">
          <font>
             <Font name="Times New Roman Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="17.0" layoutY="293.0" text="Select the Customer for Booking:">
+      <Label layoutX="377.0" layoutY="20.0" text="Booking List:">
          <font>
             <Font name="Times New Roman Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="303.0" layoutY="20.0" text="Booking List:">
-         <font>
-            <Font name="Times New Roman Bold" size="13.0" />
-         </font>
-      </Label>
-      <Button layoutX="422.0" layoutY="202.0" mnemonicParsing="false" onAction="#reset" style="-fx-background-color: FFD700;" text="RESET" />
+      <Button layoutX="503.0" layoutY="293.0" mnemonicParsing="false" onAction="#reset" style="-fx-background-color: FFD700;" text="RESET" />
    </children>
 </AnchorPane>

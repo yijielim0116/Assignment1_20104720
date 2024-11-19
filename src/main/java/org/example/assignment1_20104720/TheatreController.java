@@ -3,7 +3,6 @@ package org.example.assignment1_20104720;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
@@ -76,27 +75,38 @@ public class TheatreController {
     }
 
     public void viewAllCustomers(){
+        // 清空当前显示
         viewCustomerList.getItems().clear();
+
         Node tempCustomer = TheatreApplication.customerList.head;
+
+        // 检查链表是否为空
+        if (tempCustomer == null) {
+            viewCustomerList.getItems().add("No customers found.");
+            return;
+        }
+
+        // 遍历客户链表
         while (tempCustomer != null) {
             TheatreCustomer customer = (TheatreCustomer) tempCustomer.contents;
+
             if (customer != null) {
-                viewCustomerList.getItems().add(customer.toString());
-                Node tempTB = customer.theatreBookingList.head;
-                while (tempTB != null) {
-                    TheatreBooking booking = (TheatreBooking) tempTB.contents;
+                viewCustomerList.getItems().add("Customer: " + customer);
+                Node tempBooking = customer.theatreBookingList.head;
+                while (tempBooking != null) {
+                    TheatreBooking booking = (TheatreBooking) tempBooking.contents;
                     if (booking != null) {
-                        viewCustomerList.getItems().add("\t" + booking.toString());
-                        Node tempBook = booking.theatrePerformanceList.head;
-                        while (tempBook != null) {
-                            TheatrePerformance performance = (TheatrePerformance) tempBook.contents;
+                        viewCustomerList.getItems().add("\tBooking: " + booking);
+                        Node tempPerformance = booking.theatrePerformanceList.head;
+                        while (tempPerformance != null) {
+                            TheatrePerformance performance = (TheatrePerformance) tempPerformance.contents;
                             if (performance != null) {
-                                viewCustomerList.getItems().add("\t\t" + performance.toString());
+                                viewCustomerList.getItems().add("\t\tPerformance: " + performance);
                             }
-                            tempBook = tempBook.nextNode;
+                            tempPerformance = tempPerformance.nextNode;
                         }
                     }
-                    tempTB = tempTB.nextNode;
+                    tempBooking = tempBooking.nextNode;
                 }
             }
             tempCustomer = tempCustomer.nextNode;

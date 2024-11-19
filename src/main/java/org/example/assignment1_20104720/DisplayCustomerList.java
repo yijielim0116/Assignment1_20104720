@@ -1,6 +1,5 @@
 package org.example.assignment1_20104720;
 
-import javafx.collections.ObservableList;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 
