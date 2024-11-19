@@ -1,12 +1,18 @@
 package models;
 
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
+import org.example.assignment1_20104720.DisplayCustomerList;
+import org.example.assignment1_20104720.TheatreApplication;
 import org.example.assignment1_20104720.TheatreCustomer;
+import org.example.assignment1_20104720.TheatreCustomerController;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.example.assignment1_20104720.TheatreApplication.customerList;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 public class TheatreCustomerTest {
     private TheatreCustomer validTheatreCustomer;
@@ -73,6 +79,4 @@ public class TheatreCustomerTest {
            assertTrue(validCustomer.toString().contains("phoneNumber='0834211475'"));
        }
    }
-
-
 }

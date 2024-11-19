@@ -4,8 +4,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 
 public class DisplayCustomerList {
-    Node head = null;
-    DisplayBookingList bookingList;
+    public Node head = null;
 
     public void addTheatreCustomer(TheatreCustomer TC){
         Node tcnode = new Node();

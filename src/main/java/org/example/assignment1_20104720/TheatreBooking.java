@@ -10,6 +10,7 @@ public class TheatreBooking {
 
     //List of performance lists
     public DisplayPerformanceList theatrePerformanceList = new DisplayPerformanceList();
+    public DisplayShowList theatreShowList = new DisplayShowList();
 
     //Constructor
     public TheatreBooking(String theatreShow, String theatreCustomer, String bookingID, String theatrePerformance, String seatNumber) {
@@ -18,6 +19,7 @@ public class TheatreBooking {
         this.bookingID = bookingID;
         this.theatrePerformance = theatrePerformance;
         this.seatNumber = seatNumber;
+
     }
 
     //Methods

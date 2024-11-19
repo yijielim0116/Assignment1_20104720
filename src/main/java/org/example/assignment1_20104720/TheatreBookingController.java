@@ -45,6 +45,18 @@ public class TheatreBookingController {
             return;
         }
 
+        TheatreShow selectedShow = showForBooking.getSelectionModel().getSelectedItem();
+        if (selectedShow == null) {
+            System.out.println("Please select a show.");
+            return;
+        }
+
+        TheatrePerformance selectedPerformance = performanceForBooking.getSelectionModel().getSelectedItem();
+        if (selectedPerformance == null) {
+            System.out.println("Please select a performance.");
+            return;
+        }
+
         for (String seat : selectedSeats) {
             TheatreBooking tb = new TheatreBooking(showName, customerName, bookingID, performanceDate, seat);
             tb.setSeatNumber(seat);
@@ -161,7 +173,7 @@ public class TheatreBookingController {
             }
         }
     }
-
+    
     @FXML
     public void reset() {
         TheatreCustomer selectedCustomer = customerForBooking.getSelectionModel().getSelectedItem();
