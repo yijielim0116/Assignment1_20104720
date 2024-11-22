@@ -158,7 +158,6 @@ public class TheatreBookingController {
                 seatButton.setStyle("-fx-background-color: " + (isAvailable ? color : "darkgreen"));
                 seatButton.setDisable(!isAvailable);
 
-                // 添加点击事件
                 seatButton.setOnAction(event -> {
                     if (selectedSeats.contains(seatId)) {
                         selectedSeats.remove(seatId);

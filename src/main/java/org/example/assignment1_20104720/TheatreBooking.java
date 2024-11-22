@@ -10,26 +10,29 @@ public class TheatreBooking {
 
     //List of performance lists
     public DisplayPerformanceList theatrePerformanceList = new DisplayPerformanceList();
-    public DisplayShowList theatreShowList = new DisplayShowList();
 
     //Constructor
+
     public TheatreBooking(String theatreShow, String theatreCustomer, String bookingID, String theatrePerformance, String seatNumber) {
         this.theatreShow = theatreShow;
         this.theatreCustomer = theatreCustomer;
         this.bookingID = bookingID;
         this.theatrePerformance = theatrePerformance;
         this.seatNumber = seatNumber;
-
     }
 
+
     //Methods
+
+
     @Override
     public String toString() {
         return "TheatreBooking{" +
                 "theatreShow='" + theatreShow + '\'' +
+                ", theatreCustomer='" + theatreCustomer + '\'' +
                 ", bookingID='" + bookingID + '\'' +
                 ", theatrePerformance='" + theatrePerformance + '\'' +
-                ", seatNumber=" + seatNumber +
+                ", seatNumber='" + seatNumber + '\'' +
                 '}';
     }
 
