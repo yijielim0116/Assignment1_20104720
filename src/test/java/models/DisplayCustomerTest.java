@@ -1,7 +1,5 @@
 package models;
 
-import javafx.collections.ObservableList;
-import javafx.scene.control.ListView;
 import org.example.assignment1_20104720.DisplayCustomerList;
 import org.example.assignment1_20104720.TheatreCustomer;
 import org.junit.jupiter.api.BeforeEach;
