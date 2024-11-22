@@ -1,5 +1,7 @@
 package org.example.assignment1_20104720;
 
+import java.util.Objects;
+
 public class TheatreCustomer {
     //Fields
     private String name;
@@ -48,5 +50,20 @@ public class TheatreCustomer {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        TheatreCustomer that = (TheatreCustomer) obj;
+        return name.equals(that.name) &&
+                emailAddress.equals(that.emailAddress) &&
+                phoneNumber.equals(that.phoneNumber);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, emailAddress, phoneNumber);
     }
 }

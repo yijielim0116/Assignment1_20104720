@@ -10,7 +10,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
-import static org.example.assignment1_20104720.TheatreApplication.customerList;
 import static org.junit.jupiter.api.Assertions.*;
 
 

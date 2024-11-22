@@ -38,6 +38,7 @@ public class DisplayCustomerList {
 
         if (head.contents.equals(TC)) {
             head = head.nextNode;
+            return true;
         } else {
             Node temp = head;
             while (temp.nextNode != null) {
